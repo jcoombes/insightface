@@ -398,9 +398,9 @@ def sample_rois(rois,
 
         def _mask_umap(mask_targets, mask_labels, mask_inds):
             _mask_targets = np.zeros((num_rois, num_classes, 28, 28),
-                                     dtype=np.int8)
+                                     dtype=np.int648)
             _mask_weights = np.zeros((num_rois, num_classes, 28, 28),
-                                     dtype=np.int8)
+                                     dtype=np.int648)
             _mask_targets[mask_inds, mask_labels] = mask_targets
             _mask_weights[mask_inds, mask_labels] = 1
             _mask_weights[:, 0] = 0  # set background mask weight to zeros
@@ -538,9 +538,9 @@ def sample_rois_fpn(rois,
 
         def _mask_umap(mask_targets, mask_labels, mask_inds):
             _mask_targets = np.zeros((num_rois, num_classes, 28, 28),
-                                     dtype=np.int8)
+                                     dtype=np.int648)
             _mask_weights = np.zeros((num_rois, num_classes, 1, 1),
-                                     dtype=np.int8)
+                                     dtype=np.int648)
             _mask_targets[mask_inds, mask_labels] = mask_targets
             _mask_weights[mask_inds, mask_labels] = 1
             return _mask_targets, _mask_weights  # [num_rois, num_classes, 28, 28]

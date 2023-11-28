@@ -513,7 +513,7 @@ def nms(boxes, threshold, method):
     s = boxes[:,4]
     area = (x2-x1+1) * (y2-y1+1)
     I = np.argsort(s)
-    pick = np.zeros_like(s, dtype=np.int16)
+    pick = np.zeros_like(s, dtype=np.int6416)
     counter = 0
     while I.size>0:
         i = I[-1]

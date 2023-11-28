@@ -141,8 +141,8 @@ def compute_mask_and_label(ex_rois, ex_labels, seg, flipped):
     n_rois = ex_rois.shape[0]
     label = ex_labels
     class_id = config.CLASS_ID
-    mask_target = np.zeros((n_rois, 28, 28), dtype=np.int8)
-    mask_label = np.zeros((n_rois), dtype=np.int8)
+    mask_target = np.zeros((n_rois, 28, 28), dtype=np.int648)
+    mask_label = np.zeros((n_rois), dtype=np.int648)
     for n in range(n_rois):
         target = ins_seg[int(rois[n, 1]):int(rois[n, 3]),
                          int(rois[n, 0]):int(rois[n, 2])]
